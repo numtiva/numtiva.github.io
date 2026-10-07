@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Numtiva provides free online calculators for EMI, SIP, percentage, age, discount, GST and more. Simple and easy-to-use calculators.">
+    <title>Numtiva - Free Online Calculators - EMI, SIP, GST, Age & More</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="logo">Numtiva</div>
+    <nav>
+        
+    </nav>
+</header>
+    <section id="calculators"></section>
+    <h1>Free Online Calculators</h1>
+    <p>Simple, fast and accurate calculators for everyday use.</p>
+    <h2>Choose a Calculator</h2>
+    </section>
+    <div class="calculator-options">
+    <button onclick="showCalculator('percentage-calculator')">Percentage</button>
+    <button onclick="showCalculator('emi-calculator')">EMI</button>
+    <button onclick="showCalculator('age-calculator')">Age</button>
+    <button onclick="showCalculator('discount-calculator')">Discount</button>
+    <button onclick="showCalculator('gst-calculator')">GST</button>
+    <button onclick="showCalculator('sip-calculator')">SIP</button>
+</div>
+<section class="why-section">
+    <h2>Why Use Our Online Calculators?</h2>
+    <p>
+        Our free online calculators make everyday calculations simple and quick.
+        Calculate EMI, SIP returns, percentages, discounts, GST, age and more
+        directly from your browser.
+    </p>
+</section>
+<div id="percentage-calculator" class="calculator calculator-card">
+    <h2>Percentage Calculator</h2>
+<p>Calculate percentages quickly and easily.</p>
+    
+<input type="number" id="number" placeholder="Enter number">
+<input type="number" id="percentage" placeholder="Enter percentage">
+
+    <button onclick="calculatePercentage()">Calculate</button>
+    <button onclick="showCalculatorOptions()">Back to Calculators</button>
+
+    <h3 id="result"></h3>
+</div>
+<div id="emi-calculator" class="calculator calculator-card">
+    <h2>EMI Calculator</h2>
+<p>Calculate your monthly loan EMI and payment.</p>
+    <input type="number" id="loanAmount" placeholder="Loan amount">
+
+    <input type="number" id="interestRate" placeholder="Annual interest rate (%)">
+
+    <input type="number" id="loanTenure" placeholder="Loan tenure (years)">
+
+    <button onclick="calculateEMI()">Calculate</button>
+    <button onclick="showCalculatorOptions()">Back to Calculators</button>
+
+    <h3 id="emiResult"></h3>
+</div>
+<div id="age-calculator" class="calculator calculator-card">
+    <h2>Age Calculator</h2>
+<p>Calculate your age from your date of birth.</p>
+    <div class="date-input">
+    <input type="text" id="birthDate" placeholder="DD/MM/YYYY" maxlength="10">
+    <button type="button" onclick="openCalendar()">📅</button>
+    <input type="date" id="hiddenDate" onchange="selectDate()" style="display: none;">
+</div>
+
+    <button onclick="calculateAge()">Calculate</button>
+    <button onclick="showCalculatorOptions()">Back to Calculators</button>
+
+    <h3 id="ageResult"></h3>
+</div>
+<div id="discount-calculator" class="calculator calculator-card">
+    <h2>Discount Calculator</h2>
+<p>Find your discount amount and final price.</p>
+    <input type="number" id="originalPrice" placeholder="Original price">
+
+    <input type="number" id="discountPercent" placeholder="Discount percentage">
+
+    <button onclick="calculateDiscount()">Calculate</button>
+    <button onclick="showCalculatorOptions()">Back to Calculators</button>
+
+    <h3 id="discountResult"></h3>
+</div>
+<div id="gst-calculator" class="calculator calculator-card">
+    <h2>GST Calculator</h2>
+<p>Calculate GST amount and total price.</p>
+    <input type="number" id="gstAmount" placeholder="Enter amount">
+
+    <input type="number" id="gstRate" placeholder="GST rate (%)">
+
+    <button onclick="calculateGST()">Calculate</button>
+    <button onclick="showCalculatorOptions()">Back to Calculators</button>
+
+    <h3 id="gstResult"></h3>
+</div>
+<div id="sip-calculator" class="calculator calculator-card" style="display: none;">
+    <h2>SIP Calculator</h2>
+    <p>Calculate your estimated SIP returns.</p>
+
+    <input type="number" id="sipInvestment" placeholder="Monthly investment">
+    <input type="number" id="sipRate" placeholder="Expected annual return (%)">
+    <input type="number" id="sipYears" placeholder="Investment period (years)">
+
+    <button onclick="calculateSIP()">Calculate</button>
+    <button onclick="showCalculatorOptions()">Back to Calculators</button>
+
+    <h3 id="sipResult"></h3>
+</div>
+<script src="script.js"></script>
+<footer>
+    <p>© 2026 Calculator Tools. All rights reserved.</p>
+    <div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+</footer>
+</body>
+</html>
